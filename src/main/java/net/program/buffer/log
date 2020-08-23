@@ -1,0 +1,6 @@
+BufferedInpuStream  BufferedOutpuStream
+二者都维护了一个数组
+BufferedInpuStream  读 先从数组里读 读到了再返回 没读到就去流里面读 读满自己的数组 或 遇到结束 或暂时没有数据才返回
+
+BufferedOutpuStream 写 先写向数组 数组写不下了就先flush 再写，如果写完之后还没写完，就做flush 和 数组拷贝。
+
